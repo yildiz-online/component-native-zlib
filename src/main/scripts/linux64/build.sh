@@ -13,14 +13,6 @@ rm cmake_install.cmake
 rm Makefile
 rm install_manifest.txt
 rm CTestTestfile.cmake
-rm example
-rm example64
-rm libz.a
-rm libz.so
-rm libz.so.1
-rm libz.so.1.2.11
-rm minigzip
-rm minigzip64
 rm zconf.h
 rm zlib.pc
 

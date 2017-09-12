@@ -3,7 +3,7 @@ cmake ../../c++ -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="../../../../t
 make install
 r1=$?
 
-cp ../../c++/zutil.h ../../../../target/classes/linux64/include
+cp ../../c++/zutil.h ../../../../target/classes/win32/include
 
 make clean
 
@@ -13,15 +13,7 @@ rm cmake_install.cmake
 rm Makefile
 rm install_manifest.txt
 rm CTestTestfile.cmake
-rm example.exe
-rm example64.exe
-rm libzlib.dll
-rm libzlib.dll.a
-rm libzlibstatic.a
-rm minigzip.exe
-rm minigzip64.exe
 rm zconf.h
 rm zlib.pc
-rm zlib1rc.obj
 
 return $r1

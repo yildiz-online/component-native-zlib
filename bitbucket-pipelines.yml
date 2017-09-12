@@ -1,0 +1,11 @@
+image: moussavdb/yildiz-build-image
+
+pipelines:
+  default:
+    - step:
+        script:
+          - openssl aes-256-cbc -pass pass:$OPENSSL_PWD -in private-key.gpg.enc -out private-key.gpg -d
+          - gpg --import private-key.gpg
+          - mvn -V -B -s settings.xml -Denv=linux64 deploy
+          - mvn -V -B -s settings.xml -Denv=win32 deploy
+          - mvn -V -B -s settings.xml -Denv=win64 deploy
