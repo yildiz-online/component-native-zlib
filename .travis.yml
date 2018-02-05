@@ -1,6 +1,6 @@
 language: java
 jdk:
-  - oraclejdk8
+  - oraclejdk9
 script:
   - mvn -V -B -s settings.xml test -Denv=linux64
 install:
