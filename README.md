@@ -12,7 +12,7 @@ https://zlib.net/
 
 ## Requirements
 
-To build this module, you will need a java 8 JDK, Maven 3, cmake and a c++ compiler.
+To build this module, you will need a java 9 JDK, Maven 3, cmake and a c++ compiler.
 
 ## Coding Style and other information
 
