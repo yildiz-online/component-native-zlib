@@ -2,6 +2,6 @@ language: java
 jdk:
   - oraclejdk9
 script:
-  - mvn -V -B -s settings.xml test -Denv=linux64
+  - mvn -V -B -s settings.xml test -Plinux64
 install:
-  - mvn -V -B -s settings.xml clean install -Denv=linux64
+  - mvn -V -B -s settings.xml clean install -Plinux64
