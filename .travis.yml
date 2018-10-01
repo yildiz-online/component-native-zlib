@@ -1,7 +1,11 @@
-language: java
-jdk:
-  - oraclejdk9
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker pull moussavdb/build-java-native
+
 script:
-  - mvn -V -B -s settings.xml test -Plinux64
-install:
-  - mvn -V -B -s settings.xml clean install -Plinux64
+  - docker run -v $PWD:/src -w /src moussavdb/build-java-native mvn -V -s settings.xml clean install
+
