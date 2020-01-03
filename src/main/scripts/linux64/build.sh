@@ -3,6 +3,8 @@
 cmake ../../c++ \
 -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_INSTALL_PREFIX="../../../../target/classes/linux64" \
+-DCMAKE_C_FLAGS="${CMAKE_C_FLAGS} -fpic" \
+-DMAKE_CXX_FLAGS="${CMAKE_CXX_FLAGS} -fpic" \
 -G "Unix Makefiles"
 
 make install
