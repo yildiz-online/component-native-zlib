@@ -1,5 +1,3 @@
-sudo: required
-
 language: generic
 
 git:
@@ -16,8 +14,8 @@ services:
   - docker
 
 before_install:
-  - docker pull moussavdb/build-java-native
+  - docker pull moussavdb/build-java-native-amd64
 
 script:
-  - chmod 777 deploy-maven-central.sh
-  - travis_retry docker run -v $PWD:/src -v $HOME/.m2:/root/.m2 -e BRANCH=$TRAVIS_BRANCH  -e VAULT_TOKEN=$VAULT_TOKEN moussavdb/build-java-native ./deploy-maven-central.sh
+  - chmod +x deploy-maven-central.sh
+  - travis_retry docker run -v $PWD:/src -v $HOME/.m2:/root/.m2 -e BRANCH=$TRAVIS_BRANCH  -e VAULT_TOKEN=$VAULT_TOKEN moussavdb/build-java-native-amd64
